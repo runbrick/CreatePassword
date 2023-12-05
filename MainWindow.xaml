@@ -1,0 +1,46 @@
+﻿<Window x:Class="CreatePassword.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreatePassword"
+        mc:Ignorable="d"
+        Title="密码生成器" Height="200" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Content="所用字符" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Content="排除字符" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="密码长度" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="结果" Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <WrapPanel Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+            <CheckBox Content="a-z" x:Name="az" />
+            <CheckBox Content="A-Z" x:Name="AZ"/>
+            <CheckBox Content="0-9" x:Name="Num"/>
+            <CheckBox Content="!@#$%" />
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+            <CheckBox/>
+            <TextBox Grid.Row="1" Grid.Column="2" Text="123123123"/>
+        </WrapPanel>
+
+
+        <TextBox Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+        <TextBox x:Uid="PasswordResult" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  Text="adsfafasdfa" VerticalContentAlignment="Center" />
+        <Button Content="生成密码" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Background="#FF4342B7" Click="Button_Click" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5"/>
+    </Grid>
+</Window>
