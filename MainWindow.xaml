@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CreatePassword"
         mc:Ignorable="d"
-        Title="密码生成器" Height="200" Width="400">
+        Title="密码生成器" Height="200" Width="400" Icon="/icon.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,13 +34,13 @@
 
         <WrapPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center"  >
             <CheckBox Name="excludeCharactersCheck"/>
-            <TextBox Name="CharactersCheckText" Grid.Row="1" Grid.Column="2" Text="123123123" Width="100"/>
+            <TextBox Name="CharactersCheckText" Grid.Row="1" Grid.Column="2" Text="%$#" Width="100"/>
         </WrapPanel>
 
 
-        <TextBox Name="PasswordCount" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="10" />
+        <TextBox Name="PasswordCount" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="10" Margin="2"/>
 
-        <TextBox Name="PasswordResult" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" />
+        <TextBox Name="PasswordResult" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" Margin="2"/>
         <Button Content="生成密码" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Background="#FF4342B7" Click="Button_Click" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5"/>
     </Grid>
 </Window>
