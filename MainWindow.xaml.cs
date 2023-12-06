@@ -31,6 +31,20 @@ namespace CreatePassword
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string charactersCheckText = string.Empty;
+            if (excludeCharactersCheck.IsChecked == true)
+            {
+                charactersCheckText = CharactersCheckText.Text;
+            }
+            string v = PasswordGenerator.GeneratePassword(
+                Int32.Parse(PasswordCount.Text),
+                charactersCheckText, 
+                LowerCaseCheck.IsChecked == true,
+                UpperCaseCheck.IsChecked == true,
+                DigitsCheck.IsChecked == true,
+                SpecialCharactersCheck.IsChecked == true
+                );
+            PasswordResult.Text = v;
         }
     }
 }
